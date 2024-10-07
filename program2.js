@@ -1,17 +1,13 @@
 const decodeTheRing = function (s, p) {
   function isMatch(mIdx, pIdx, memo) {
-    // If both message and pattern are fully consumed, it's a match
     if (mIdx === message.length && pIdx === pattern.length) return true;
     
-    // If the pattern is consumed but message isn't, it's not a match
     if (pIdx === pattern.length) return false;
 
-    // If we have computed this state before, return its value
     if (memo[mIdx][pIdx] !== undefined) return memo[mIdx][pIdx];
 
     let match = false;
 
-    // Handle '*' in the pattern
     if (pattern[pIdx] === '*') {
       // '*' can either match zero or more characters
       match = isMatch(mIdx, pIdx + 1, memo) || (mIdx < message.length && isMatch(mIdx + 1, pIdx, memo));
