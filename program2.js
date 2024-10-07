@@ -11,9 +11,7 @@ const decodeTheRing = function (s, p) {
     if (pattern[pIdx] === '*') {
       match = isMatch(mIdx, pIdx + 1, memo) || (mIdx < message.length && isMatch(mIdx + 1, pIdx, memo));
     } 
-    // Handle '?' in the pattern
     else if (pattern[pIdx] === '?') {
-      // '?' must match exactly one character in the message
       match = mIdx < message.length && isMatch(mIdx + 1, pIdx + 1, memo);
     } 
     // Handle regular characters
