@@ -12,14 +12,12 @@ const getTotalIsles = function (grid) {
           return;
       }
 
-      // Mark the current landmass as water to prevent re-visiting it.
       grid[row][col] = 'W';
 
-      // Explore the neighboring landmasses (up, down, left, right)
       dfs(row - 1, col); // up
       dfs(row + 1, col); // down
       dfs(row, col - 1); // left
-      dfs(row, col + 1); // right
+      dfs(row, col + 1); 
   }
 
   // Iterate over every cell in the grid
