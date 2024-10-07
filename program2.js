@@ -9,7 +9,6 @@ const decodeTheRing = function (s, p) {
     let match = false;
 
     if (pattern[pIdx] === '*') {
-      // '*' can either match zero or more characters
       match = isMatch(mIdx, pIdx + 1, memo) || (mIdx < message.length && isMatch(mIdx + 1, pIdx, memo));
     } 
     // Handle '?' in the pattern
