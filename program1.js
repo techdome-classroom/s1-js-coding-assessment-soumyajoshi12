@@ -20,7 +20,6 @@ const getTotalIsles = function (grid) {
       dfs(row, col + 1); 
   }
 
-  // Iterate over every cell in the grid
   for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
           // When we encounter an unvisited landmass, it means we've found a new island.
