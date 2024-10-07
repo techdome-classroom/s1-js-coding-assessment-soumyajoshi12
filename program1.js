@@ -22,10 +22,8 @@ const getTotalIsles = function (grid) {
 
   for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
-          // When we encounter an unvisited landmass, it means we've found a new island.
           if (grid[i][j] === 'L') {
               numIslands += 1;
-              // Perform DFS to mark the entire island as visited.
               dfs(i, j);
           }
       }
