@@ -7,7 +7,6 @@ const getTotalIsles = function (grid) {
   const rows = grid.length;
   const cols = grid[0].length;
 
-  // Helper function to perform DFS and mark visited landmasses.
   function dfs(row, col) {
       if (row < 0 || col < 0 || row >= rows || col >= cols || grid[row][col] === 'W') {
           return;
