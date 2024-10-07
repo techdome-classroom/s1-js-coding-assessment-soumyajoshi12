@@ -1,4 +1,4 @@
-const decodeTheRing = function (s, p) {
+const decodeTheRing = function (message, pattern) {
   function isMatch(mIdx, pIdx, memo) {
     if (mIdx === message.length && pIdx === pattern.length) return true;
     
